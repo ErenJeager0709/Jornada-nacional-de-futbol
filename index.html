@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Nacional de Fútbol ITQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23FF6600'/><circle cx='50' cy='50' r='35' fill='%230066CC'/><path d='M35 45 Q50 30 65 45 L60 60 Q50 70 40 60 Z' fill='white' stroke='%23333' stroke-width='2'/><circle cx='40' cy='40' r='5' fill='%23333'/><circle cx='60' cy='40' r='5' fill='%23333'/></svg>">
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="header-content">
+            <!-- Imagen izquierda de la escuela - ESTÁTICA -->
+            <div class="header-img-left">
+                <img src="i.png" alt="ITQ Izquierda" onerror="this.src='https://via.placeholder.com/100x100/0066CC/FFFFFF?text=ITQ'">
+            </div>
+            
+            <div class="header-titulo">
+                <!-- El zorro tiene animación SOLO si en CSS está activada -->
+                <div class="zorro-icon">🦊</div>
+                <h1>⚽ JORNADA NACIONAL DE FÚTBOL PARA LAS JUVENTUDES: TORNEO DE CASCARITAS Y DOMINADAS ⚽</h1>
+                <p class="fecha">📅 17 de marzo | 8:00 AM - 6:00 PM</p>
+                <p class="lema">"Forjando campeones con espíritu Zorro"</p>
+            </div>
+            
+            <!-- Imagen derecha de la escuela - ESTÁTICA -->
+            
+        </div>
+    </div>
+</header>
+
+    <main class="container">
+        <!-- Cronograma del día -->
+        <section class="cronograma">
+            <h2>📋 CRONOGRAMA DEL DÍA</h2>
+            <div class="cronograma-grid">
+                <div class="cronograma-item">
+                    <span class="hora">8:00 AM</span>
+                    <span class="evento">⚽ Inicio Futbol Tennis</span>
+                </div>
+                <div class="cronograma-item">
+                    <span class="hora">--></span>
+                    <span class="evento">⚽ Concurso de Dominadas</span>
+                </div>
+                <div class="cronograma-item">
+                    <span class="hora">--></span>
+                    <span class="evento">🎯  Crossbar Challenge</span>
+                </div>
+                <div class="cronograma-item">
+                    <span class="hora">--></span>
+                    <span class="evento">⚔️ Reto: Sistemas/Gestión vs Industrial</span>
+                </div>
+                <div class="cronograma-item">
+                    <span class="hora">^</span>
+                    <span class="evento">🏆 Premiación</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Futbol Tennis -->
+        <section class="deporte" id="futbol-tennis">
+            <div class="deporte-header">
+                <span class="emoji-deporte">⚽</span>
+                <h2>Futbol Tennis</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">👥 Equipo:</span>
+                    <span class="valor">3 vs 3 (máximo 3 toques por equipo, sin toques consecutivos del mismo jugador)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">💰 Inscripción:</span>
+                    <span class="valor precio">$30 MXN por equipo</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">🎯 Formato:</span>
+                    <span class="valor">Set a 11 puntos (diferencia de 2)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">⏰ Horario:</span>
+                    <span class="valor horario">↓</span>
+                </div>
+            </div>
+            <button class="btn-reglas" onclick="mostrarReglas('futbol')">📋 Ver reglas</button>
+        </section>
+
+        <!-- Sección de Concurso de Dominadas (Jueguitos) -->
+        <section class="deporte" id="dominadas">
+            <div class="deporte-header">
+                <span class="emoji-deporte">⚽</span>
+                <h2>Concurso de Dominadas (Jueguitos)</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">👤 Participación:</span>
+                    <span class="valor">Individual</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">💰 Inscripción:</span>
+                    <span class="valor precio">$20 MXN por persona</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">⏰ Horario:</span>
+                    <span class="valor horario">↓</span>
+                </div>
+            </div>
+            <button class="btn-reglas" onclick="mostrarReglas('dominadas')">📋 Ver reglas</button>
+        </section>
+
+        <!-- Sección de Crossbar Challenge -->
+        <section class="deporte" id="crossbar">
+            <div class="deporte-header">
+                <span class="emoji-deporte">🎯</span>
+                <h2>Crossbar Challenge</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">📌 Descripción:</span>
+                    <span class="valor">Golpear el travesaño desde distancia a definir el día del evento</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">💰 Inscripción:</span>
+                    <span class="valor precio">$20 MXN por persona</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">⏰ Horario:</span>
+                    <span class="valor horario">↓</span>
+                </div>
+            </div>
+            <button class="btn-reglas" onclick="mostrarReglas('crossbar')">📋 Ver reglas</button>
+        </section>
+
+        <!-- Sección de Reto: Sistemas/Gestión vs Industrial -->
+        <section class="deporte reto-destacado" id="reto">
+            <div class="deporte-header">
+                <span class="emoji-deporte">⚔️</span>
+                <h2>RETO ACADÉMICO: Sistemas/Gestión vs Industrial</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">👥 Equipos:</span>
+                    <span class="valor">7 vs 7 (mínimo 3 mujeres en cancha por equipo)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">💰 Inscripción:</span>
+                    <span class="valor precio">GRATUITO </span>
+                </div>
+                <div class="info-item uniformes">
+                    <span class="label">👕 Uniformes:</span>
+                    <div class="uniforme industrial">Industrial 🔴 Rojo</div>
+                    <div class="uniforme sistemas">Sistemas/Gestión 🔵🟠 Azul con Naranja</div>
+                </div>
+                <div class="info-item">
+                    <span class="label">⏰ Horario:</span>
+                    <span class="valor horario">↓</span>
+                </div>
+            </div>
+            <button class="btn-reglas" onclick="mostrarReglas('reto')">📋 Ver reglas</button>
+        </section>
+
+        <!-- Botones de acción -->
+        <div class="acciones-container">
+            <a href="https://docs.google.com/spreadsheets/d/1KMNbfcEwTaiR_tX6xDD-vgDndlhhfytK/edit?usp=drive_link&ouid=100219531979269342715&rtpof=true&sd=true" class="btn-inscripcion" target="_blank">
+                <span>📝</span> Inscribirme ahora
+            </a>
+            <button class="btn-info" onclick="mostrarInfoGeneral()">
+                <span>🦊</span> Información general
+            </button>
+        </div>
+
+        <!-- Modal para reglas -->
+        <div id="modal-reglas" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModal()">&times;</span>
+                <h3 id="modal-titulo">Reglas</h3>
+                <div id="modal-contenido"></div>
+            </div>
+        </div>
+
+        <!-- Modal para información general -->
+        <div id="modal-info" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="cerrarModalInfo()">&times;</span>
+                <h3>🦊 Información del Evento</h3>
+                <div class="info-general">
+                    <p><strong>📅 Fecha:</strong> 17 de marzo</p>
+                    <p><strong>⏰ Horario general:</strong> 8:00 AM --></p>
+                    <p><strong>📍 Lugar:</strong> Instalaciones "Cancha de la raza"</p>
+                    <p><strong>🎟️ Inscripciones:</strong> Abiertas hasta el 16 de marzo</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="zorro-icon">🦊</span>
+                    <span>Tecnológico Nacional de México</span>
+                </div>
+                <p>© 2026 - Jornada Nacional de Fútbol | 17 de marzo</p>
+                <p class="frase">"Orgullo Zorro"</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
